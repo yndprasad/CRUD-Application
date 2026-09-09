@@ -1,0 +1,72 @@
+<link href="style.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-between align-items-center">
+      <h1>Crud Application</h1>
+      <button id="themeToggle" class="btn btn-dark"><i class="fa-solid fa-moon"></i> Dark Mode</button>
+    </div>
+    <div>
+      <input class="m-4 form form-control" placeholder="search " id="searchValue"/>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD</button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="carform">
+              <label>Brand<input class="form form-control" id="carbrand"/></label><br><br>
+              <label>Image<input class="form form-control" id="carimage"/></label><br><br>
+              <label>Price<input class="form form-control" id="carprice"/></label><br><br>
+              <label>Qty<input class="form form-control" id="carqty"/></label><br><br>
+              <button class="btn btn-success">submit</button>
+           </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table class="table table-hover text-center table-striped">
+        <thead>
+          <tr>
+            <th>s:no</th>
+            <th>brand</th>
+            <th>image</th>
+            <th>price</th>
+            <th>qty</th>
+            <th>total</th>
+            <th>edit</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody id="root"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4"></td>
+            <td>GrandTotal</td>
+            <td id="GrandTotal">0000</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
